@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Desalination Pilot | J. T.-Y. Bessette</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3, .serif { font-family: 'DM Serif Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        body { font-family: 'Inter', sans-serif; }
+        .border-thin { border: 0.5px solid #e5e7eb; }
+        .hero-crop { object-position: 50% 35%; }
+        .zoomable { cursor: zoom-in; transition: opacity 0.3s; }
+        .zoomable:hover { opacity: 0.8; }
+        #modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 100;
+            cursor: zoom-out;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-white text-black antialiased">
+
+    <nav class="fixed w-full z-50 mix-blend-difference text-white px-6 md:px-12 py-8 flex justify-between items-center">
+        <a href="../index.html" class="mono text-[10px] tracking-[0.4em] uppercase hover:opacity-50 transition">← Back to home</a>
+        <div class="mono text-[10px] tracking-[0.4em] uppercase">Project 04 // 2024</div>
+    </nav>
+
+    <header class="h-[70vh] w-full bg-gray-900 relative overflow-hidden">
+        <img src="../images/bgndrf/bgndrf-top.jpg" class="absolute inset-0 w-full h-full object-cover hero-crop opacity-60" alt="Solar Desalination Pilot">
+        <div class="absolute inset-0 flex items-center justify-center text-center px-6">
+            <div class="max-w-4xl">
+                <span class="mono text-[10px] tracking-[0.5em] uppercase text-white/60 mb-4 block italic">Research & Field Engineering</span>
+                <h1 class="text-white text-5xl md:text-7xl serif italic leading-tight">Solar Powered <br>Desalination Pilot</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 md:px-12 py-24">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+            
+            <div class="md:col-span-7">
+                <h2 class="mono text-[10px] tracking-[0.4em] uppercase text-gray-400 mb-8 italic">The Context</h2>
+                
+                <section class="mb-12">
+                    <h3 class="serif text-3xl mb-4 italic">Background</h3>
+                    <p class="text-xl font-light leading-relaxed text-gray-800">
+                        Inland brackish groundwater is a critical freshwater resource, yet its salinity often exceeds safe drinking levels. While desalination offers a solution, traditional off-grid systems rely on massive battery banks to buffer the inherent variability of solar energy—driving up the cost, footprint, and maintenance requirements for the communities that need it most.
+                    </p>
+                </section>
+
+                <section class="mb-12">
+                    <h3 class="serif text-3xl mb-4 italic">The Problem</h3>
+                    <p class="text-xl font-light leading-relaxed text-gray-800">
+                        Existing solar desalination systems are typically designed to run at a constant set-point. When solar intensity fluctuates, the system fails unless expensive energy storage fills the gap. This battery-heavy architecture accounts for a significant portion of capital expenditure and represents a primary point of failure in remote environments.
+                    </p>
+                </section>
+
+                <section class="mb-16">
+                    <h3 class="serif text-3xl mb-4 italic">The Solution</h3>
+                    <p class="text-xl font-light leading-relaxed text-gray-800">
+                        We developed a direct-drive Photovoltaic Electrodialysis (PV-ED) system that removes the need for large batteries. By implementing a "Flow-Commanded Current Control" strategy, the system dynamically adjusts its power consumption to match real-time solar availability. In a 6-month field pilot at BGNDRF, New Mexico, the prototype produced between 2000 and 5000 liters per day while reducing battery capacity requirements by over 99%.
+                    </p>
+                </section>
+
+                <div class="p-8 border border-thin bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center group mb-16 gap-6">
+                    <div>
+                        <h3 class="serif text-2xl mb-1 italic">Nature Water Paper (2024)</h3>
+                        <p class="mono text-[10px] text-gray-400 uppercase tracking-widest">Primary Research Manuscript</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://www.nature.com/articles/s44221-024-00314-6" target="_blank" class="px-5 py-3 border border-black mono text-[10px] uppercase tracking-widest hover:bg-gray-100 transition">View Online</a>
+                        <a href="../images/bgndrf/bgndrf-manuscript.pdf" target="_blank" class="px-5 py-3 bg-black text-white mono text-[10px] uppercase tracking-widest hover:bg-gray-800 transition">View PDF</a>
+                    </div>
+                </div>
+
+                <div class="border-t border-thin pt-12">
+                    <h2 class="mono text-[10px] tracking-[0.4em] uppercase text-gray-400 mb-8 italic">Selected Press</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                        <a href="https://news.mit.edu/2024/solar-powered-desalination-system-requires-no-extra-batteries-1008" target="_blank" class="text-sm underline underline-offset-4 decoration-gray-200 hover:decoration-black transition">MIT News</a>
+                        <a href="https://www.technologyreview.com/2024/12/23/1107395/solar-powered-desalination-2/" target="_blank" class="text-sm underline underline-offset-4 decoration-gray-200 hover:decoration-black transition">MIT Technology Review</a>
+                        <a href="https://arstechnica.com/science/2024/10/desalination-system-adjusts-itself-to-work-with-renewable-power/" target="_blank" class="text-sm underline underline-offset-4 decoration-gray-200 hover:decoration-black transition">Ars Technica</a>
+                        <a href="https://www.eurekalert.org/news-releases/1060320" target="_blank" class="text-sm underline underline-offset-4 decoration-gray-200 hover:decoration-black transition">EurekAlert!</a>
+                        <a href="https://www.npr.org/2025/04/25/1247139357/here-now-anytime-04-25-2025" target="_blank" class="text-sm underline underline-offset-4 decoration-gray-200 hover:decoration-black transition">NPR (Here & Now)</a>
+                        <a href="https://www.goodnewsnetwork.org/hyper-efficient-solar-powered-desalination-system-requires-no-extra-batteries-to-purify-groundwater/" target="_blank" class="text-sm underline underline-offset-4 decoration-gray-200 hover:decoration-black transition">Good News Network</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-5">
+                <h2 class="mono text-[10px] tracking-[0.4em] uppercase text-gray-400 mb-8 italic">The Gallery</h2>
+                <div class="space-y-8">
+                    <img src="../images/bgndrf/bgndrf-close.jpg" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="System Close-up">
+                    <img src="../images/bgndrf/bgndrf-skid.jpg" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Main Skid">
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="../images/bgndrf/rough-cad.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="CAD Design">
+                        <img src="../images/bgndrf/rough-diagram.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="System Diagram">
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4">
+                        <img src="../images/bgndrf/skid-back.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Skid Back">
+                        <img src="../images/bgndrf/skid-front.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Skid Front">
+                        <img src="../images/bgndrf/skid-front2.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Skid Detail">
+                    </div>
+
+                    <img src="../images/bgndrf/skid-side.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Side Elevation">
+                    <img src="../images/bgndrf/skid-old.jpg" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Prototype v1">
+                    <img src="../images/bgndrf/team.jpeg" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Field Team">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" onclick="closeModal()">
+        <img id="modal-img" class="max-h-full max-w-full object-contain shadow-2xl" alt="Enlarged View">
+    </div>
+
+    <footer class="px-6 py-12 border-t border-thin text-center">
+        <a href="../index.html" class="mono text-[10px] text-gray-400 uppercase tracking-[0.5em] hover:text-black transition">Return to Portfolio</a>
+    </footer>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    </script>
+</body>
+</html>

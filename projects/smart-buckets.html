@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Buckets | J. T.-Y. Bessette</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3, .serif { font-family: 'DM Serif Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        body { font-family: 'Inter', sans-serif; }
+        .border-thin { border: 0.5px solid #e5e7eb; }
+        
+        .hero-crop { object-position: 50% 15%; }
+
+        /* Zoom styles */
+        .zoomable { cursor: zoom-in; transition: opacity 0.3s; }
+        .zoomable:hover { opacity: 0.8; }
+        
+        #modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 100;
+            cursor: zoom-out;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        #modal img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-white text-black antialiased">
+
+    <div id="modal" onclick="closeModal()">
+        <img id="modal-img" src="" alt="Zoomed view">
+        <div class="absolute top-8 right-8 text-white mono text-[10px] tracking-widest uppercase">Click anywhere to close</div>
+    </div>
+
+    <nav class="fixed w-full z-50 mix-blend-difference text-white px-6 md:px-12 py-8 flex justify-between items-center">
+        <a href="../index.html" class="mono text-[10px] tracking-[0.4em] uppercase hover:opacity-50 transition">← Back to Home</a>
+    </nav>
+
+    <section class="h-[70vh] w-full bg-gray-100 overflow-hidden relative">
+        <img src="../images/jwafs-buckets/Jon and Gokul in the field.JPG" 
+             class="w-full h-full object-cover hero-crop grayscale hover:grayscale-0 transition duration-1000" 
+             alt="Jon and Gokul in the field">
+        <div class="absolute inset-0 bg-black/10"></div>
+    </section>
+
+    <main class="max-w-5xl mx-auto px-6 py-24">
+        <span class="mono text-[10px] tracking-[0.4em] uppercase text-gray-400">Development Engineering</span>
+        <h1 class="serif text-6xl md:text-8xl mt-4 mb-20 border-b border-thin pb-12">Smart Buckets.</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+            <div class="md:col-span-7 space-y-20 text-lg leading-relaxed font-light text-gray-800">
+                <section>
+                    <h2 class="serif text-4xl text-black mb-6 italic">Background</h2>
+                    <p>Water fetching is a daily reality for millions in rural and low-income regions globally. This significant physical and time-intensive burden predominantly falls upon women and children, walking miles every day to secure a basic necessity. This systemic imbalance fuels deep-seated economic and gender disparities: children are frequently forced to miss school, while women are deprived of opportunities for paid work or further education.</p>
+                </section>
+
+                <section>
+                    <h2 class="serif text-4xl text-black mb-6 italic">Problem</h2>
+                    <p>Despite the severity of this issue, quantifying the true extent of the water-fetching burden is notoriously difficult. Traditional data collection relies on infrequent surveys and large-scale censuses, which are expensive to conduct and often fail to reach the most isolated populations. Without high-frequency, accurate data, it is nearly impossible for policymakers to design infrastructure that effectively meets the needs of these communities.</p>
+                </section>
+
+                <section>
+                    <h2 class="serif text-4xl text-black mb-6 italic">Solution</h2>
+                    <p>To bridge this data gap, engineer Jon Bessette and social scientist Gokul Sampath teamed up to develop "Smart Buckets"—low-cost (&lt;$20) IoT sensors designed to be retrofitted onto existing water containers. Sponsored by the <a href="https://jwafs.mit.edu/projects/2024/smart-buckets-measuring-water-access-rural-india" target="_blank" class="underline underline-offset-4 decoration-gray-300 hover:decoration-black transition">Abdul Latif Jameel Water and Food Systems Lab (J-WAFS)</a>, the team deployed over 600 sensors in West Bengal, India, proving that high-resolution data can be collected unobtrusively to solve water access challenges.</p>
+                </section>
+            </div>
+
+            <div class="md:col-span-5">
+                <div class="sticky top-32 space-y-4">
+                    <span class="mono text-[10px] uppercase text-gray-400 block mb-6 tracking-widest">Process & Field Artifacts</span>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="../images/jwafs-buckets/Design iteration sketching.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Sketching">
+                            <img src="../images/jwafs-buckets/Force Sensor Design Iterations.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Sensor Iteration">
+                            <img src="../images/jwafs-buckets/IMG_1883.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Process 1">
+                            <img src="../images/jwafs-buckets/IMG_2001.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Process 2">
+                        </div>
+                        <div class="space-y-4 mt-8">
+                            <img src="../images/jwafs-buckets/Circuit Board Mfg 2.png" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="PCB Mfg">
+                            <img src="../images/jwafs-buckets/IMG_2096.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Assembly">
+                            <img src="../images/jwafs-buckets/Water fetching buckets at a well in pilot study.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Field Well">
+                            <img src="../images/jwafs-buckets/india-buckets.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="India Buckets">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="px-6 py-12 border-t border-thin text-center">
+        <a href="../index.html" class="mono text-[10px] text-gray-400 uppercase tracking-[0.5em] hover:text-black transition">Return to Portfolio</a>
+    </footer>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Stop background scrolling
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        // Close on 'Escape' key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J. T.-Y. Bessette | Bio Build B-Side</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, .serif { font-family: 'DM Serif Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        body { font-family: 'Inter', sans-serif; }
+        .border-thin { border: 0.5px solid #e5e7eb; }
+        .zoom-container { overflow: hidden; }
+        .zoom-container img { transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .zoom-container:hover img { transform: scale(1.05); }
+        html { scroll-behavior: smooth; }
+        .hero-overlay { background: rgba(0, 0, 0, 0.4); }
+        
+        /* Hide scrollbar but keep functionality */
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-white text-black antialiased">
+
+    <nav class="fixed w-full z-50 mix-blend-difference text-white px-6 md:px-12 py-8 flex justify-between items-center">
+        <div class="mono text-[10px] tracking-[0.4em] uppercase">J. T.-Y. Bessette // 2026</div>
+        <div class="hidden md:flex space-x-12 mono text-[10px] tracking-[0.4em] uppercase">
+            <a href="#bio" class="hover:opacity-50 transition">01 Bio</a>
+            <a href="#build" class="hover:opacity-50 transition">02 Build</a>
+            <a href="#bside" class="hover:opacity-50 transition">03 B-Side</a>
+        </div>
+    </nav>
+
+    <section class="h-screen w-full bg-black relative flex items-center justify-center overflow-hidden">
+        <img src="images/bgndrf/bgndrf-top.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale" alt="J. T.-Y. Bessette Hero">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 text-center px-6">
+            <h1 class="text-white text-7xl md:text-9xl tracking-tighter leading-[0.85] mb-6">Hi! <br><span class="italic text-gray-300 font-serif">I'm Jon.</span></h1>
+            <p class="mono text-white text-[10px] tracking-[0.6em] uppercase opacity-80">Engineering — Design — Art</p>
+        </div>
+        <div class="absolute bottom-12 mono text-white text-[9px] tracking-[0.5em] uppercase opacity-40 animate-bounce">
+            Scroll to Navigate
+        </div>
+    </section>
+
+    <section id="bio" class="px-6 md:px-12 py-32 border-b border-thin bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
+            <div class="md:col-span-4">
+                <span class="mono text-[10px] tracking-[0.4em] uppercase text-gray-400">01 / BIO</span>
+                <div class="mt-12 sticky top-32">
+                    <div class="zoom-container aspect-[3/4] bg-gray-100 grayscale mb-6 overflow-hidden border border-thin">
+                        <img src="images/mit-semiclose.JPG" class="w-full h-full object-cover" alt="Jon Bessette Profile">
+                    </div>
+                    <p class="mono text-[10px] leading-relaxed text-gray-500 uppercase tracking-widest">Currently Building @ KIRA</p>
+                </div>
+            </div>
+            <div class="md:col-span-8">
+                <h2 class="serif text-6xl md:text-8xl mb-16 leading-[0.9] tracking-tighter uppercase italic">Bio.</h2>
+                <div class="max-w-2xl">
+                    <p class="text-xl font-light leading-snug mb-12 text-gray-800">
+                        I am Jon Bessette, a mechanical engineer (SUNY Buffalo BS '20) and scientist (<a href="https://gear.mit.edu" target="_blank" class="underline underline-offset-4 decoration-gray-300 hover:decoration-black transition">MIT PhD '25</a>) by training. I'm an <a href="https://activate.org/kira" target="_blank" class="underline underline-offset-4 decoration-gray-300 hover:decoration-black transition">Activate</a> Fellow, National Science Foundation Graduate Research Fellow, SUNY Chancellor's Awardee, and former Fulbright scholar. Currently, I'm working on building <a href="https://www.kira.eco" target="_blank" class="underline underline-offset-4 decoration-gray-300 hover:decoration-black transition">KIRA</a>. 
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-12 border-t border-thin pt-12">
+                        <div>
+                            <span class="mono text-[10px] uppercase tracking-widest text-gray-400 block mb-4">Academic</span>
+                            <ul class="space-y-2 text-sm underline underline-offset-4 decoration-gray-200">
+                                <li><a href="https://scholar.google.com/citations?hl=en&user=m_v2hxUAAAAJ" target="_blank" class="hover:decoration-black transition">Google Scholar</a></li>
+                                <li><a href="https://orcid.org/0000-0002-8261-1993" target="_blank" class="hover:decoration-black transition">ORCID</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span class="mono text-[10px] uppercase tracking-widest text-gray-400 block mb-4">Professional</span>
+                            <ul class="space-y-2 text-sm underline underline-offset-4 decoration-gray-200">
+                                <li><a href="mailto:jon_bessette@yahoo.com" class="hover:decoration-black transition">Curriculum Vitae</a></li>
+                                <li><a href="https://www.linkedin.com/in/jonathanbessette/" target="_blank" class="hover:decoration-black transition">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="build" class="px-6 md:px-12 py-32 border-b border-thin">
+        <div class="max-w-7xl mx-auto flex justify-between items-end mb-20">
+            <div>
+                <span class="mono text-[10px] tracking-[0.4em] uppercase text-gray-400">02 / Selected Builds</span>
+                <h2 class="serif text-5xl md:text-7xl mt-4 leading-none tracking-tight uppercase italic">Build.</h2>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-100 border border-thin">
+            
+            <a href="projects/bgndrf.html" class="bg-white p-8 group cursor-pointer border-b md:border-r border-thin block">
+                <div class="zoom-container aspect-[16/11] bg-gray-50 mb-8 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="images/bgndrf/night.JPG" class="w-full h-full object-cover" alt="Solar-Powered Desalination Field Pilot">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="mono text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-2">Field Research</p>
+                        <h3 class="serif text-4xl leading-none">Solar-Powered Desalination Field Pilot</h3>
+                    </div>
+                    <span class="text-3xl font-light opacity-20 group-hover:opacity-100 group-hover:translate-x-2 transition-all">→</span>
+                </div>
+            </a>
+
+            <a href="projects/smart-buckets.html" class="bg-white p-8 group cursor-pointer border-b border-thin block">
+                <div class="zoom-container aspect-[16/11] bg-gray-50 mb-8 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="images/jwafs-buckets/training.JPG" class="w-full h-full object-cover" alt="Smart Buckets">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="mono text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-2">Development Engineering</p>
+                        <h3 class="serif text-4xl leading-none">Smart Buckets</h3>
+                    </div>
+                    <span class="text-3xl font-light opacity-20 group-hover:opacity-100 group-hover:translate-x-2 transition-all">→</span>
+                </div>
+            </a>
+
+            <a href="projects/electrodialysis-mppt.html" class="bg-white p-8 group cursor-pointer border-b md:border-r border-thin block">
+                <div class="zoom-container aspect-[16/11] bg-gray-50 mb-8 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="images/edrmppt/testsetup3.JPG" class="w-full h-full object-cover" alt="ED MPPT">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="mono text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-2">Power Electronics</p>
+                        <h3 class="serif text-4xl leading-none">Electrodialysis MPPT</h3>
+                    </div>
+                    <span class="text-3xl font-light opacity-20 group-hover:opacity-100 group-hover:translate-x-2 transition-all">→</span>
+                </div>
+            </a>
+
+            <a href="projects/valve.html" class="bg-white p-8 group cursor-pointer border-b border-thin block">
+                <div class="zoom-container aspect-[16/11] bg-gray-50 mb-8 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="images/reprogvalve/acrylic-valve4.JPG" class="w-full h-full object-cover" alt="Mechanically Reprogrammable Valve">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="mono text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-2">Mechanical Logic</p>
+                        <h3 class="serif text-4xl leading-none">Reprogrammable Valve</h3>
+                    </div>
+                    <span class="text-3xl font-light opacity-20 group-hover:opacity-100 group-hover:translate-x-2 transition-all">→</span>
+                </div>
+            </a>
+
+            <a href="projects/pouro.html" class="bg-white p-8 group cursor-pointer md:border-r border-thin block">
+                <div class="zoom-container aspect-[16/11] bg-gray-50 mb-8 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="images/pouro/experiment-zoomed.JPG" class="w-full h-full object-cover" alt="Domestic Semi-Batch Reverse Osmosis">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="mono text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-2">Water Systems</p>
+                        <h3 class="serif text-4xl leading-none">Semi-Batch Reverse Osmosis</h3>
+                    </div>
+                    <span class="text-3xl font-light opacity-20 group-hover:opacity-100 group-hover:translate-x-2 transition-all">→</span>
+                </div>
+            </a>
+
+            <a href="projects/amplifier.html" class="bg-white p-8 group cursor-pointer block">
+                <div class="zoom-container aspect-[16/11] bg-gray-50 mb-8 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="images/amplifier/finished.JPG" class="w-full h-full object-cover" alt="Class-D Amplifier">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="mono text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-2">Analog Electronics</p>
+                        <h3 class="serif text-4xl leading-none">Class-D Amplifier</h3>
+                    </div>
+                    <span class="text-3xl font-light opacity-20 group-hover:opacity-100 group-hover:translate-x-2 transition-all">→</span>
+                </div>
+            </a>
+        </div>
+    </section>
+<section id="bside" class="py-32 bg-white border-t border-thin">
+        <div class="px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-start mb-24 gap-8">
+                <div class="max-w-2xl">
+                    <div class="mono text-[10px] text-gray-400 uppercase tracking-[0.5em] mb-8">03 / B-Side</div>
+                    <h2 class="serif text-5xl md:text-7xl mt-4 leading-none tracking-tight uppercase italic">Analog & Digital.</h2>
+                </div>
+                <div class="md:w-1/3 md:pt-16">
+                    <p class="text-gray-500 leading-relaxed italic text-sm">
+                        Adventure is out there.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-24">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="mono text-[10px] uppercase tracking-[0.4em] text-black">Digital / Photography</span>
+                    <div class="h-px flex-grow bg-gray-100"></div>
+                </div>
+                
+                <div class="flex overflow-x-auto gap-8 pb-8 snap-x scrollbar-hide">
+                    <div class="flex-none w-24 md:w-32 flex items-center justify-center border-l border-thin">
+                        <span class="mono text-[9px] -rotate-90 uppercase tracking-[0.5em] text-gray-300 whitespace-nowrap">Cinematic</span>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/cinematic/scene-alex.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/cinematic/scene-alex.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/cinematic/scene-laundromat.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/cinematic/scene-laundromat.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/cinematic/scene-grocery.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/cinematic/scene-grocery.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/cinematic/scene-diner.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/cinematic/scene-diner.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/cinematic/scene-alex-eric.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/cinematic/scene-alex-eric.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/cinematic/scene-record1.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/cinematic/scene-record1.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/cinematic/scene-record2.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/cinematic/scene-record2.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/cinematic/scene-record3.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/cinematic/scene-record3.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/cinematic/scene-writer.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/cinematic/scene-writer.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+
+                    <div class="flex-none w-24 md:w-32 flex items-center justify-center border-l border-thin ml-8">
+                        <span class="mono text-[9px] -rotate-90 uppercase tracking-[0.5em] text-gray-300 whitespace-nowrap">Glasgow</span>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/homeless-glasgow/H1-BW.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/homeless-glasgow/H1-BW.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/homeless-glasgow/H2-BW.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/homeless-glasgow/H2-BW.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/homeless-glasgow/H3-BW.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/homeless-glasgow/H3-BW.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/homeless-glasgow/H4-BW.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/homeless-glasgow/H4-BW.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/homeless-glasgow/H5-BW.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/homeless-glasgow/H5-BW.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/homeless-glasgow/H6-BW.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/homeless-glasgow/H6-BW.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+
+                    <div class="flex-none w-24 md:w-32 flex items-center justify-center border-l border-thin ml-8">
+                        <span class="mono text-[9px] -rotate-90 uppercase tracking-[0.5em] text-gray-300 whitespace-nowrap">Street</span>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/street/atlanta-man.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/street/atlanta-man.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/street/baby-color.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/street/baby-color.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/street/kites.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/street/kites.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/street/street-band.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/street/street-band.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+
+                    <div class="flex-none w-24 md:w-32 flex items-center justify-center border-l border-thin ml-8">
+                        <span class="mono text-[9px] -rotate-90 uppercase tracking-[0.5em] text-gray-300 whitespace-nowrap">DR</span>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/dr/dr-1.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/dr/dr-1.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/dr/dr-2.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/dr/dr-2.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/dr/dr-3.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/dr/dr-3.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/dr/dr-4.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/dr/dr-4.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+
+                    <div class="flex-none w-24 md:w-32 flex items-center justify-center border-l border-thin ml-8">
+                        <span class="mono text-[9px] -rotate-90 uppercase tracking-[0.5em] text-gray-300 whitespace-nowrap">Misc</span>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/misc/blue-flower.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/misc/blue-flower.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] md:w-[450px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/photos/misc/lampshade-color.jpg')">
+                        <div class="aspect-[3/2] bg-gray-50 overflow-hidden border border-thin">
+                            <img src="images/b-side/photos/misc/lampshade-color.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="mono text-[10px] uppercase tracking-[0.4em] text-black">Analog / Art & Sketch</span>
+                    <div class="h-px flex-grow bg-gray-100"></div>
+                </div>
+                
+                <div class="flex overflow-x-auto gap-8 pb-8 snap-x scrollbar-hide">
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/woodcut.JPG')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/woodcut.JPG" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/woodcut-final.JPG')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/woodcut-final.JPG" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/bar-final.jpg')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/bar-final.jpg" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/bar.JPG')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/bar.JPG" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/coffee-table-plan.JPG')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/coffee-table-plan.JPG" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/coffee-table.JPG')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/coffee-table.JPG" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/curtain.jpg')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/curtain.jpg" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/falling-final.JPG')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/falling-final.JPG" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/falling.JPG')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/falling.JPG" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/metalcut-final.JPG')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/metalcut-final.JPG" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/metalcut.JPG')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/metalcut.JPG" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/city.jpg')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/city.jpg" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="flex-none w-[280px] md:w-[350px] snap-start cursor-zoom-in" onclick="openModal('images/b-side/art/sketches.JPG')">
+                        <div class="aspect-[3/4] bg-gray-50 overflow-hidden border border-thin p-4 bg-white">
+                            <img src="images/b-side/art/sketches.JPG" class="w-full h-full object-contain grayscale hover:grayscale-0 transition duration-700">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-end mt-12">
+                <span class="mono text-[9px] text-gray-300 uppercase tracking-widest animate-pulse">Shift + Scroll to explore —&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <div id="gallery-modal" class="fixed inset-0 bg-white/95 z-[100] hidden flex items-center justify-center cursor-zoom-out" onclick="closeModal()">
+        <div class="relative max-h-[90vh] max-w-[95vw] flex items-center justify-center">
+            <img id="modal-img" class="max-h-[85vh] max-w-full object-contain shadow-2xl border border-thin bg-white p-2">
+            <button class="absolute top-0 right-0 p-4 mono text-[10px] uppercase tracking-widest text-gray-400">Close [Esc]</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById('gallery-modal');
+            const img = document.getElementById('modal-img');
+            img.src = src;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('gallery-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+
+    <footer class="px-6 md:px-12 py-12 border-t border-thin flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="mono text-[9px] text-gray-400 uppercase tracking-[0.5em]">J. T.-Y. Bessette // 2026</div>
+        <div class="flex space-x-8 mono text-[9px] text-gray-400 uppercase tracking-[0.3em]">
+            <a href="https://www.linkedin.com/in/jonathanbessette/" target="_blank" class="hover:text-black transition">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+</html>

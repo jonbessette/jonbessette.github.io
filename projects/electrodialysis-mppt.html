@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrodialysis MPPT | J. T.-Y. Bessette</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3, .serif { font-family: 'DM Serif Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        body { font-family: 'Inter', sans-serif; }
+        .border-thin { border: 0.5px solid #e5e7eb; }
+        
+        .hero-crop { object-position: 50% 25%; }
+
+        /* Zoom styles */
+        .zoomable { cursor: zoom-in; transition: opacity 0.3s; }
+        .zoomable:hover { opacity: 0.8; }
+        
+        #modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 100;
+            cursor: zoom-out;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        #modal img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-white text-black antialiased">
+
+    <div id="modal" onclick="closeModal()">
+        <img id="modal-img" src="" alt="Zoomed view">
+        <div class="absolute top-8 right-8 text-white mono text-[10px] tracking-widest uppercase">Click anywhere to close</div>
+    </div>
+
+    <nav class="fixed w-full z-50 mix-blend-difference text-white px-6 md:px-12 py-8 flex justify-between items-center">
+        <a href="../index.html" class="mono text-[10px] tracking-[0.4em] uppercase hover:opacity-50 transition">← Back to Home</a>
+    </nav>
+
+    <section class="h-[70vh] w-full bg-gray-100 overflow-hidden relative">
+        <img src="../images/edrmppt/board.jpeg" 
+             class="w-full h-full object-cover hero-crop grayscale hover:grayscale-0 transition duration-1000" 
+             alt="Electrodialysis MPPT Visual Abstract">
+        <div class="absolute inset-0 bg-black/10"></div>
+    </section>
+
+    <main class="max-w-5xl mx-auto px-6 py-24">
+        <span class="mono text-[10px] tracking-[0.4em] uppercase text-gray-400">Power Electronics & Desalination</span>
+        <h1 class="serif text-6xl md:text-8xl mt-4 mb-20 border-b border-thin pb-12">Electrodialysis Maximum Power Point Tracker.</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+            <div class="md:col-span-7 space-y-20 text-lg leading-relaxed font-light text-gray-800">
+                <section>
+                    <h2 class="serif text-4xl text-black mb-6 italic">Background</h2>
+                    <p>Typical solar-powered applications in off-grid environments utilize a Maximum Power Point Tracker (MPPT) to charge a battery, which then stabilizes the power for downstream loads. However, for resilient water systems like Electrodialysis (ED) desalination—which can operate effectively at variable power levels—a "direct-drive" configuration without energy storage offers a simpler and lower-cost solution.</p>
+                </section>
+
+                <section>
+                    <h2 class="serif text-4xl text-black mb-6 italic">Problem</h2>
+                    <p>Coordinating multiple variable loads to ensure a solar array remains at its peak efficiency is a significant technical challenge. Traditional power electronics are not designed to manage multiple parallel converters for a single array while simultaneously meeting the specific voltage and current requirements of separate desalination stacks. Without integrated control, these systems risk instability and significant power losses.</p>
+                </section>
+
+                <section>
+                    <h2 class="serif text-4xl text-black mb-6 italic">Solution</h2>
+                    <p>I developed an integrated multi-converter MPPT control architecture specifically for direct-driving variable loads. By using a single PV voltage sensor and multiple current sensors, the controller algorithmically adjusts the duty cycles of parallel buck-boost converters to maintain the array at the Maximum Power Point. You can review some of my technical thinking and <a href="../images/edrmppt/Notes.pdf" target="_blank" class="underline underline-offset-4 decoration-gray-300 hover:decoration-black transition">design notes here</a>.</p>
+                </section>
+
+                <section class="border-t border-thin pt-12">
+                     <p class="text-sm mono text-gray-400 uppercase tracking-widest mb-4">Academic Documentation</p>
+                     <a href="../images/edrmppt/Manuscript-Draft.pdf" target="_blank" class="text-xl serif italic underline underline-offset-8 decoration-gray-200 hover:decoration-black transition">Download the full Manuscript Draft [PDF]</a>
+                </section>
+            </div>
+
+            <div class="md:col-span-5">
+                <div class="sticky top-32 space-y-4">
+                    <span class="mono text-[10px] uppercase text-gray-400 block mb-6 tracking-widest">Design & Schematic Gallery</span>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="../images/edrmppt/Visual-Abstract.PNG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Visual Abstract">
+                            
+                            <div class="group relative">
+                                <img src="../images/edrmppt/Schematic.png" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Schematic">
+                                <a href="../images/edrmppt/Schematic.pdf" target="_blank" class="absolute bottom-2 right-2 bg-white/90 px-2 py-1 mono text-[8px] uppercase tracking-tighter border border-thin opacity-0 group-hover:opacity-100 transition-opacity">Open PDF</a>
+                            </div>
+
+                            <img src="../images/edrmppt/testsetup3.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Test Setup">
+                            <img src="../images/edrmppt/board.jpeg" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Circuit Board">
+                        </div>
+                        <div class="space-y-4 mt-8">
+                            <img src="../images/edrmppt/Schematic-Sketch.png" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Schematic Sketch">
+                            <img src="../images/edrmppt/cards.JPG" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Cards">
+                            <img src="../images/edrmppt/cad.jpeg" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="CAD Model">
+                            <img src="../images/edrmppt/board-setup.png" onclick="openModal(this.src)" class="zoomable w-full grayscale hover:grayscale-0 transition border border-thin" alt="Board Setup">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="px-6 py-12 border-t border-thin text-center">
+        <a href="../index.html" class="mono text-[10px] text-gray-400 uppercase tracking-[0.5em] hover:text-black transition">Return to Portfolio</a>
+    </footer>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+
+</body>
+</html>
